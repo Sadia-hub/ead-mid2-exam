@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
+    image:{
+        type:String,
+        required:[true,"Image is required"]
+    },
     name:{
         type:String,
         required:[true,"Name is required"]
@@ -13,7 +17,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true,"State is required"]
     },
-    Address:{
+    address:{
         type:String,
         required:[true,"Address is required"]
     },
@@ -32,11 +36,8 @@ const userSchema = new mongoose.Schema({
     zip:{
         type:String,
         required:[true,"Zip is required"]
-    },
-    image:{
-        type:String,
-        required:[true,"Image is required"]
     }
+    
 })
 
 module.exports=mongoose.model("user",userSchema)

@@ -14,8 +14,10 @@ const router = express.Router();
 
 
 //pages
-router.route("/").get(register_page)
+router.route("/").get(register_page).post(register_user)
 router.route("/update").get(update_page)
 router.route("/users").get(users_page)
+
+router.get("/delete/:id",delete_user)
 
 module.exports = router

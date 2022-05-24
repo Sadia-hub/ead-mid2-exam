@@ -1,2 +1,31 @@
 include ./layouts/navbar
-hello world
+
+
+h1(class="text-center center") Add/Update Form
+div(class="container w-40 py-5 border text-center center mb-3")
+    form(enctype="multipart/form-data" action="/" method="post")
+
+        div(class="mb-3")
+            input(name="image" type="file" placeholder="Choose Image")
+
+        div(class="mb-3")
+            input(name="name" type="text" placeholder="name")
+            input(name="number" type="text" placeholder="numer")
+
+        div(class="mb-3")
+            input(name="state" type="text" placeholder="state")
+            input(name="address" type="text" placeholder="address")
+            
+        div(class="mb-3")
+            input(name="email" type="text" placeholder="email")
+            input(name="country" type="text" placeholder="country")
+        
+        div(class="mb-3")
+            input(name="city" type="text" placeholder="city")
+            input(name="zip" type="text" placeholder="zip")
+
+        div(class="mb-3")
+            input(type="submit" value="Update" class="btn btn-primary")
+        
+    
+

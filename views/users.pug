@@ -1,2 +1,30 @@
 include ./layouts/navbar
-Users
+
+if users
+    table(class="table table-striped") 
+        thead 
+
+            tr 
+                th #
+                th Name 
+                th Email 
+                th Phone 
+                th City 
+                th Post Code 
+                th Edit 
+                th Delete
+        tbody
+
+            each user, i in users 
+                tr 
+                    td #{i}
+                    td #{user.name}
+                    td #{user.email}
+                    td #{user.phone}
+                    td #{user.city}
+                    td #{user.zip}
+                    -var id = user._id
+                    td 
+                        a(href="/edit/"+id class="btn btn-primary") Edit 
+                    td
+                        a(href="/delete/"+id class="btn btn-primary") Delete
