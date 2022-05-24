@@ -1,7 +1,7 @@
 const userModel = require("../models/users")
 
 const register_page=(req, res)=>{
-    res.render("register",{})
+    res.render("register",{user:{}})
 }
 
 const update_page=(req, res)=>{

@@ -1,19 +1,27 @@
 include ./layouts/navbar
 
+-var image = user.image ||""
+-var name = user.name || ""
+-var number = user.number ||""
+-var city = user.city || ""
+-var state = user.state || ""
+-var address = user.address || ""
+-var email = user.email || ""
+-var country = user.country || ""
 
 h1(class="text-center center") Add/Update Form
 div(class="container w-40 py-5 border text-center center mb-3")
     form(enctype="multipart/form-data" action="/" method="post")
 
         div(class="mb-3")
-            input(name="image" type="file" placeholder="Choose Image")
+            input(name="image" type="file" placeholder="Choose Image" )
 
         div(class="mb-3")
-            input(name="name" type="text" placeholder="name")
-            input(name="number" type="text" placeholder="numer")
+            input(name="name" type="text" placeholder="name" value=name)
+            input(name="number" type="text" placeholder="numer" value=number)
 
         div(class="mb-3")
-            input(name="state" type="text" placeholder="state")
+            input(name="state" type="text" placeholder="state" )
             input(name="address" type="text" placeholder="address")
             
         div(class="mb-3")
